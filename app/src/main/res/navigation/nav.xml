@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/plato1">
+
+    <fragment
+        android:id="@+id/plato1"
+        android:name="com.example.appex.Plato1"
+        android:label="fragment_plato1"
+        tools:layout="@layout/fragment_plato1" >
+        <action
+            android:id="@+id/action_plato1_to_bebida"
+            app:destination="@id/bebida" />
+    </fragment>
+    <fragment
+        android:id="@+id/bebida"
+        android:name="com.example.appex.Bebida"
+        android:label="fragment_bebida"
+        tools:layout="@layout/fragment_bebida" >
+        <action
+            android:id="@+id/action_bebida_to_total"
+            app:destination="@id/total" />
+    </fragment>
+    <fragment
+        android:id="@+id/total"
+        android:name="com.example.appex.Total"
+        android:label="fragment_total"
+        tools:layout="@layout/fragment_total" />
+</navigation>
